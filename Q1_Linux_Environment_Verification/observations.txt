@@ -1,0 +1,37 @@
+1. id
+The id command displayed the current user's identity information.
+It showed the user ID, group ID, and all groups associated with the account.
+The output confirmed that the Linux account is configured correctly.
+User and group information are important for managing permissions and access control.
+
+--------------------------------------------------
+
+2. echo $SHELL
+The echo $SHELL command displayed the active shell being used.
+The shell provides the interface through which Linux commands are executed.
+Knowing the active shell helps in understanding available features and scripting behavior.
+This confirmed the command-line environment currently in use.
+
+--------------------------------------------------
+
+3. pwd
+The pwd command displayed the current working directory.
+It confirmed that all Question 1 files are being stored in the correct repository folder.
+Working in the correct directory helps maintain an organized project structure.
+The command is useful for verifying the current location in the file system.
+
+--------------------------------------------------
+
+4. ls -la
+The ls -la command displayed files, directories, and hidden files.
+It showed Environment_Report.txt, .gitkeep, observations.txt, and the screenshots folder.
+The output confirmed that the required files for Question 1 are present.
+Hidden files and permission details were also visible.
+
+--------------------------------------------------
+
+5. ping -c 4 google.com
+The ping command successfully verified internet connectivity.
+All four packets were transmitted and received without any packet loss.
+The system was able to communicate with external networks correctly.
+This confirmed that network access was functioning properly.
