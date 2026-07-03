@@ -1,0 +1,40 @@
+Question 4: File Access and I/O Investigation
+
+1. Open Files Investigation
+Command:
+lsof | head -20
+
+Explanation:
+I used the lsof command to list open files and processes. The output showed commands, process IDs, users, file descriptors, and file names currently in use by the system.
+
+2. File Descriptor Investigation
+Command:
+ls -l /proc/$$/fd
+
+Explanation:
+I examined the file descriptors of the current shell process. File descriptor 0 represented standard input, 1 represented standard output, and 2 represented standard error.
+
+3. Standard Output Redirection
+Command:
+echo "This text was redirected to a file." > output_redirect.txt
+
+Explanation:
+I redirected standard output into a file using the > operator. The text was successfully written to output_redirect.txt instead of being displayed directly on the terminal.
+
+4. Error Redirection
+Command:
+ls file_that_does_not_exist 2> error_output.txt
+
+Explanation:
+I redirected standard error into a file using the 2> operator. The error message was stored inside error_output.txt and could be viewed later using cat.
+
+5. Resource Limits
+Command:
+ulimit -a
+
+Explanation:
+I examined system resource limits. The maximum number of open files was 1024, the stack size was 8192 KB, and several limits such as CPU time and virtual memory were unlimited.
+
+6. How Linux Manages File I/O
+
+Linux manages file input and output through file descriptors. Every process uses file descriptor 0 for input, 1 for output, and 2 for errors. The kernel handles reading, writing, buffering, and redirection operations, allowing programs to interact with files, devices, and terminals using a unified interface.

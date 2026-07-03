@@ -1,0 +1,13 @@
+Question 4 Technical Observations
+
+1. The lsof command showed that Linux keeps track of open files using file descriptors associated with running processes.
+
+2. Standard input, output, and error correspond to file descriptors 0, 1, and 2 respectively.
+
+3. Output redirection using > writes normal command output into a file instead of displaying it on the terminal.
+
+4. Error redirection using 2> stores error messages in a separate file, making troubleshooting easier.
+
+5. Linux resource limits can be examined using ulimit -a. The current environment allows 1024 open files and unlimited CPU time and virtual memory.
+
+6. Linux manages file I/O through a unified file descriptor model, allowing files, devices, pipes, and terminals to be accessed using similar mechanisms.
