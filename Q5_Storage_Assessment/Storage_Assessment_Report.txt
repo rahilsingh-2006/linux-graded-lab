@@ -1,0 +1,52 @@
+Storage Assessment Report
+=========================
+
+Available Storage Devices
+-------------------------
+lsblk showed two storage devices:
+
+1. /dev/sda (100 GB)
+   - Multiple partitions
+   - Main system storage
+
+2. /dev/sdb (5 GB)
+   - Mounted as /home
+   - Used for user data
+
+Mounted File Systems
+--------------------
+The system uses:
+
+- overlay mounted on /
+- /dev/sda1 mounted on /root
+- /dev/disk/by-id/google-home-part1 mounted on /home
+- tmpfs mounted on /dev and /dev/shm
+
+Disk Usage Statistics
+---------------------
+Filesystem usage observed:
+
+- Root filesystem: 48% utilized
+- Home filesystem: 3% utilized
+
+Inode Utilization
+-----------------
+Inode usage remains healthy:
+
+- Root filesystem: 14% inode utilization
+- Home filesystem: 1% inode utilization
+
+Storage Health Observations
+---------------------------
+- Sufficient free storage space is available.
+- Inode consumption is low.
+- No storage partitions appear critically utilized.
+- The system environment is suitable for application deployment.
+
+Recommendations
+---------------
+- Regularly monitor disk usage and inode consumption.
+- Remove unnecessary files and logs periodically.
+- Implement automated backup procedures.
+- Use log rotation mechanisms to prevent excessive storage growth.
+- Establish storage monitoring alerts for production systems.

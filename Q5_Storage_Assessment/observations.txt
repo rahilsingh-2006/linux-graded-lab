@@ -1,0 +1,16 @@
+Question 5 Observations
+=======================
+
+1. The Cloud Shell environment contains two storage devices.
+
+2. The primary storage device (/dev/sda) provides approximately 100 GB of space.
+
+3. The home directory is mounted on a separate 5 GB partition.
+
+4. Root filesystem utilization is approximately 48%, leaving sufficient free space.
+
+5. Inode utilization is low, indicating healthy filesystem management.
+
+6. No storage device appears to be under critical pressure.
+
+7. Regular monitoring, backups, and log rotation are recommended for long-term stability.
