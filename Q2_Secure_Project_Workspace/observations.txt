@@ -1,0 +1,39 @@
+1. mkdir project_workspace, documents, and source_code
+The required workspace structure was created successfully.
+Separate directories were used for documentation and source files.
+This organization improves maintainability and project management.
+
+--------------------------------------------------
+
+2. umask and umask -S
+The current umask value was 0002.
+By default, new files allowed group write access and public read access.
+Additional permission changes were necessary to secure the workspace.
+
+--------------------------------------------------
+
+3. Creating requirements.txt and main.py
+Sample project files were created inside their respective directories.
+These files provided practical examples for permission management.
+The initial permissions reflected the active umask settings.
+
+--------------------------------------------------
+
+4. ls -ld before modification
+The directories initially had drwxrwxr-x permissions.
+Group members could read, write, and execute within the workspace.
+Other users could read and access directory contents.
+
+--------------------------------------------------
+
+5. chmod 700 and chmod 600
+The workspace was secured using restrictive permissions.
+Directories were changed to drwx------ and files to -rw-------.
+Only the owner retained access to the project resources.
+
+--------------------------------------------------
+
+6. stat project_workspace
+The ownership information confirmed that the current user owned all resources.
+The UID and GID matched the logged-in account.
+Ownership and permissions together provide strong protection for project data.

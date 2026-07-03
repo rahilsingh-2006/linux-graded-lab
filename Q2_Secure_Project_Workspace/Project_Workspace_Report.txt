@@ -1,0 +1,78 @@
+Project Workspace Report
+
+1. Directory Structure Created
+
+project_workspace/
+├── documents/
+│   └── requirements.txt
+└── source_code/
+    └── main.py
+
+--------------------------------------------------
+
+2. File Permissions Before Modification
+
+Directories:
+project_workspace        drwxrwxr-x
+documents                drwxrwxr-x
+source_code              drwxrwxr-x
+
+Files:
+requirements.txt         -rw-rw-r--
+main.py                  -rw-rw-r--
+
+Observation:
+Initially, group members had write access and other users had read access.
+The workspace was functional but not fully secure for sensitive project data.
+
+--------------------------------------------------
+
+3. File Permissions After Modification
+
+Directories:
+project_workspace        drwx------
+documents                drwx------
+source_code              drwx------
+
+Files:
+requirements.txt         -rw-------
+main.py                  -rw-------
+
+Observation:
+Only the owner can now read, write, or execute the project contents.
+No other users or groups have access to the workspace.
+
+--------------------------------------------------
+
+4. Ownership Details
+
+Owner: rahilkuldeepsingh
+Group: rahilkuldeepsingh
+UID: 1000
+GID: 1000
+
+Observation:
+The project files and directories are owned by the current user.
+Ownership ensures proper accountability and access management.
+
+--------------------------------------------------
+
+5. Umask Value Used
+
+Numeric Umask:
+0002
+
+Symbolic Umask:
+u=rwx,g=rwx,o=rx
+
+Observation:
+The umask value allowed group write permissions by default.
+Additional chmod commands were required to create a more secure environment.
+
+--------------------------------------------------
+
+6. How Permissions Protect Project Data
+
+Using chmod 700 on directories restricts access to the owner only.
+Using chmod 600 on files prevents other users from reading or modifying project content.
+These permissions help maintain confidentiality, integrity, and controlled access to important project resources.
