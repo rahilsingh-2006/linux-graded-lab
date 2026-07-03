@@ -1,0 +1,14 @@
+Observations for Question 3
+
+1. The original file and the hard link shared the same inode number, proving that they referred to the same underlying data.
+
+2. The symbolic link had a different inode number because it only stored the path to the original file.
+
+3. The stat command provided useful metadata such as permissions, ownership, timestamps, and inode information.
+
+4. After deleting the original file, the hard link continued to function normally because the inode still existed.
+
+5. The symbolic link became broken after the original file was deleted because its target path no longer existed.
+
+6. This experiment demonstrated the practical difference between hard links and symbolic links in Linux file systems.
+

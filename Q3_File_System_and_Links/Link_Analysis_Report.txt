@@ -1,0 +1,69 @@
+Question 3: File System and Link Analysis
+
+1. Creating the original file
+Command:
+echo "Linux links experiment file" > original_file.txt
+
+Explanation:
+I created a file named original_file.txt containing sample text. This file was used to study hard links and symbolic links.
+
+2. Creating a hard link
+Command:
+ln original_file.txt hard_link.txt
+
+Explanation:
+I created a hard link named hard_link.txt. The hard link shares the same inode and data blocks as the original file.
+
+3. Creating a symbolic link
+Command:
+ln -s original_file.txt symbolic_link.txt
+
+Explanation:
+I created a symbolic link named symbolic_link.txt. The symbolic link stores the path to the original file instead of sharing its inode.
+
+4. Inode information
+Command:
+ls -li original_file.txt hard_link.txt symbolic_link.txt
+
+Explanation:
+The original file and the hard link had the same inode number, showing that they reference the same data. The symbolic link had a different inode number.
+
+5. Metadata collection
+Command:
+stat original_file.txt
+stat hard_link.txt
+stat symbolic_link.txt
+
+Explanation:
+The stat command provided metadata such as inode numbers, ownership, permissions, file size, and timestamps.
+
+6. Deleting the original file
+Command:
+rm original_file.txt
+
+Explanation:
+The original file was deleted to observe the behavior of the hard link and symbolic link.
+
+7. Link behavior after deletion
+Commands:
+cat hard_link.txt
+cat symbolic_link.txt
+
+Explanation:
+The hard link continued to work because it still referenced the same inode. The symbolic link became broken because its target file no longer existed.
+
+Comparison between Hard Link and Symbolic Link
+
+Hard Link:
+- Shares the same inode as the original file.
+- Continues to work after the original filename is deleted.
+- Directly references the file data.
+
+Symbolic Link:
+- Has a different inode.
+- Stores the path to the original file.
+- Becomes broken when the original file is removed.
+
+Conclusions
+
+This experiment showed that hard links and symbolic links behave differently in Linux. Hard links provide another name for the same file, while symbolic links depend on the existence of the original path. Inode analysis and metadata tools helped explain these differences.
